@@ -14,6 +14,9 @@ const LoginPage = () => {
         try {
             setloading(true)
             await login(props)
+            if (asPath === "/auth/login") {
+                push("/dashboard")
+            }
         } catch (error) {
             console.log(error)
         } finally {

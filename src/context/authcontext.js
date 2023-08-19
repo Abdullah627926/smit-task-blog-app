@@ -38,7 +38,6 @@ function AuthProvider({ children }) {
                 photoURL: image,
                 lastname: lastname,
             });
-
         } catch (error) {
             // Handle error
         }
@@ -47,7 +46,7 @@ function AuthProvider({ children }) {
     const signout = useCallback(async () => {
         try {
             await signOut(firebaseAuth);
-            push("/dashboard")
+            push("/")
         } catch (error) {
             console.log(error);
         }
@@ -58,7 +57,6 @@ function AuthProvider({ children }) {
             setloading(true);
             setuser(_user);
             setisAuthenticated(!!_user);
-
             setloading(false);
         });
     }, [user]);

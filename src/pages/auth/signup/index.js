@@ -14,7 +14,7 @@ const SignUpPage = () => {
         try {
             setloading(true)
             await signup(props)
-            push("/auth/login")
+            push("/dashboard")
             message.success("your account is sucessfully created!")
         } catch (error) {
             console.log(error)
