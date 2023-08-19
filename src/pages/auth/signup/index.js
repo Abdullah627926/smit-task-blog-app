@@ -62,14 +62,6 @@ const SignUpPage = () => {
                                 placeholder='enter a email...' />
                         </Form.Item>
                         <Form.Item
-                            name="image"
-                            rules={[
-                                { required: true, message: "please select a profile image" }
-                            ]}
-                        >
-                            <input type="file" accept="image/*" />
-                        </Form.Item>
-                        <Form.Item
                             name="password"
                             rules={[
                                 { required: true, message: "please enter a password!" }
